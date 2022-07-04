@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/IliFar/WellnessPlus/issues"
   },
-  "homepage": "https://github.com/IliFar/WellnessPlus#readme"
+  "homepage": "https://github.com/IliFar/WellnessPlus#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
 }
