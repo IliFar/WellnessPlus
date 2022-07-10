@@ -1,7 +1,6 @@
 
 
 .header {
-    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +13,8 @@
     border: 3px solid rgba(255, 255, 255, 0.499);
     border-radius: 50px;
     padding: 0 30px;
-    background-color: var(--bg-color-variant);
+    background-color: rgba(0, 0, 0, 0.6);
+    
 }
 .icon {
     font-size: 30;
