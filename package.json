@@ -2,10 +2,11 @@
   "name": "wellnessplus",
   "version": "1.0.0",
   "description": "",
-  "source": "/public/index.html",
+  "main": "dist/index.js",
+  "source": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel",
+    "start": "parcel public/index.html",
     "build": "parcel build"
   },
   "repository": {
