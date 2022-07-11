@@ -11,12 +11,14 @@ const App = () => {
   return (
     <>
       <Header />
-      <Dashboard />
-      <Profile />
-      <Statistics />
-      <Recipes />
-      <SavedRecipes />
-      <Contact />
+      <div className="container d-flex flex-column justify-content-center align-items-center">
+        <Dashboard />
+        <Profile />
+        <Statistics />
+        <Recipes />
+        <SavedRecipes />
+        <Contact />
+      </div>
     </>
   );
 };

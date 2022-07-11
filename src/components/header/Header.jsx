@@ -1,29 +1,25 @@
 import React from "react";
 import "./header.css";
-import { HiHome } from "react-icons/hi";
-import { GoPerson } from "react-icons/go";
-import { IoMdStats } from "react-icons/io";
-import { BiDish } from "react-icons/bi";
-import { MdAlternateEmail } from "react-icons/md";
+import icons from "../icons/Icons";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="navigation">
-        <div className="dashboard icon" title="Dashboard">
-          <HiHome />
+        <div className="home icon" title="Dashboard">
+          {icons.hiHome}
         </div>
         <div className="profile icon" title="Profile">
-          <GoPerson />
+          {icons.goPerson}
         </div>
         <div className="statistics icon" title="Statistics">
-          <IoMdStats />
+          {icons.stats}
         </div>
         <div className="recipes icon" title="Recipes">
-          <BiDish />
+          {icons.biDish}
         </div>
         <div className="contact icon" title="Contact">
-          <MdAlternateEmail />
+          {icons.email}
         </div>
       </div>
     </div>

@@ -1,0 +1,35 @@
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+    min-width: 80%;
+    gap: 50px;
+    padding: 50px;
+    background-color: var(--bg-color);
+}
+
+.dashboard-card {
+    background-color: var(--bg-color-variant);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 25%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.dashboard-card:hover {
+    background-color: var(--primary-color);
+}
+.title-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard-icon {
+    font-size: 30px;
+}
+.dashboard-card-body {
+    color: var(--light-color);
+}
