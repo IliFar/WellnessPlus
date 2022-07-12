@@ -12,7 +12,7 @@ const App = () => {
     <>
       <Header />
       <div className="container d-flex flex-column justify-content-center align-items-center">
-        <Dashboard />
+        {/* <Dashboard /> */}
         <Profile />
         <Statistics />
         <Recipes />

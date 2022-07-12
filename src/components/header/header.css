@@ -20,3 +20,6 @@
     font-size: 30;
     cursor: pointer;
 }
+.icon:hover {
+    color: var(--primary-color);
+}

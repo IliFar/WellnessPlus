@@ -9,7 +9,7 @@ const Header = () => {
         <div className="home icon" title="Dashboard">
           {icons.hiHome}
         </div>
-        <div className="profile icon" title="Profile">
+        <div className="icon" title="Profile">
           {icons.goPerson}
         </div>
         <div className="statistics icon" title="Statistics">
