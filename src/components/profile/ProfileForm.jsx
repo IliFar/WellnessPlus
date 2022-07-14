@@ -12,20 +12,16 @@ const ProfileForm = () => {
   });
 
   const handleInput = (e) => {
-    const {value, name}= e.target;
-    setProfileForm({...ProfileForm, [name]: value})
+    // const {value, name}= e.target;
+    
+    setProfileForm({...profileForm, [e.target.name] : e.target.value});
   };
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // axios.post(url, {
-    //   age: profileForm.age,
-    //   weight: profileForm.weight,
-    //   height: profileForm.height,
-    //   address: profileForm.address,
-    //   image: profileForm.image
-    // })
+    console.log(profileForm);
+    axios.post(url, profileForm)
   }
 
   return (
@@ -91,7 +87,7 @@ const ProfileForm = () => {
             id="photo"
             required
             className="profile-form-input"
-            value={profileForm.image}
+            value={profileForm.image[0]}
             onChange={handleInput}
           />
         </div>
