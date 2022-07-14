@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const ProfileForm = () => {
+  const url = "https://apimocha.com/profileform";
   const [profileForm, setProfileForm] = useState({
     age: 0,
     weight: 0,
@@ -14,14 +16,21 @@ const ProfileForm = () => {
     setProfileForm({...ProfileForm, [name]: value})
   };
 
-  const handleSubmit = e => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
+    // axios.post(url, {
+    //   age: profileForm.age,
+    //   weight: profileForm.weight,
+    //   height: profileForm.height,
+    //   address: profileForm.address,
+    //   image: profileForm.image
+    // })
   }
 
   return (
     <>
-      <form className="profile-form">
+      <form className="profile-form" onSubmit={handleSubmit}>
         <div className="profile-form-inputs">
           <label htmlFor="age">Age</label>
           <input
@@ -35,7 +44,6 @@ const ProfileForm = () => {
             onChange={handleInput}
           />
         </div>
-
         <div className="profile-form-inputs">
           <label htmlFor="weight">Weight (kg)</label>
           <input
