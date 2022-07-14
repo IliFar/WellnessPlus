@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import calls from "../../../api_req/profileFormReqs";
 
 const ProfileForm = () => {
-  const url = "https://apimocha.com/profileform";
+  const url = "http://localhost:8000/profileform";
   const [profileForm, setProfileForm] = useState({
     age: 0,
     weight: 0,
     height: 0,
     address: "",
-    image: [],
   });
 
+  const [image, setImage] = useState([]);
+
+  const handleImage = (e) => {
+    setImage(...image, e.target.files[0])
+  }
+
   const handleInput = (e) => {
-    // const {value, name}= e.target;
-    
-    setProfileForm({...profileForm, [e.target.name] : e.target.value});
+    setProfileForm({ ...profileForm, [e.target.name]: e.target.value });
   };
 
-
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(profileForm);
-    axios.post(url, profileForm)
-  }
+    calls.post(profileForm)
+  };
 
   return (
     <>
@@ -80,19 +80,21 @@ const ProfileForm = () => {
         </div>
 
         <div className="profile-form-inputs">
-          <label htmlFor="photo">Upload Photo</label>
+          <label htmlFor="image">Upload Photo</label>
           <input
             type="file"
-            name="photo"
-            id="photo"
+            name="image"
+            id="image"
             required
             className="profile-form-input"
-            value={profileForm.image[0]}
+            value={image[0]}
             onChange={handleInput}
           />
         </div>
 
-        <button type="submit" className="profile-form-btn">Submit</button>
+        <button type="submit" className="profile-form-btn">
+          Submit
+        </button>
       </form>
     </>
   );
