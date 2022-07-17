@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import calls from "../../../api_req/profileFormReqs";
 
 const ProfileForm = () => {
-  const url = "http://localhost:8000/profileform";
   const [profileForm, setProfileForm] = useState({
     age: 0,
     weight: 0,
@@ -12,16 +11,13 @@ const ProfileForm = () => {
 
   const [image, setImage] = useState([]);
 
-  const handleImage = (e) => {
-    setImage(...image, e.target.files[0])
-  }
-
   const handleInput = (e) => {
     setProfileForm({ ...profileForm, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-    calls.post(profileForm)
+    e.preventDefault();
+    calls.post(profileForm);
   };
 
   return (
@@ -75,19 +71,6 @@ const ProfileForm = () => {
             required
             className="profile-form-input"
             value={profileForm.address}
-            onChange={handleInput}
-          />
-        </div>
-
-        <div className="profile-form-inputs">
-          <label htmlFor="image">Upload Photo</label>
-          <input
-            type="file"
-            name="image"
-            id="image"
-            required
-            className="profile-form-input"
-            value={image[0]}
             onChange={handleInput}
           />
         </div>
