@@ -9,7 +9,6 @@ const getData = async (setData) => {
             console.log(data);
             setData(data);
         })
-    return setData;
 }
 const postData = async (data) => {
     await axios.post(url, data);
@@ -20,4 +19,4 @@ const calls = {
     "post": postData
 }
 
-export default getData;
+export {getData, postData};

@@ -8,7 +8,7 @@ const Profile = () => {
     <>
       <h1>Profile</h1>
       <div className="profile">
-        <ProfileHeader username="Iliass" />
+        <ProfileHeader />
         <ProfileForm />
       </div>
     </>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import calls from "../../../api_req/profileFormReqs";
+import { postData } from "../../../api_req/profileReqs";
 
 const ProfileForm = () => {
   const [profileForm, setProfileForm] = useState({
@@ -9,15 +9,18 @@ const ProfileForm = () => {
     address: "",
   });
 
-  const [image, setImage] = useState([]);
-
   const handleInput = (e) => {
-    setProfileForm({ ...profileForm, [e.target.name]: e.target.value });
+    const value = e.target.value;
+    const name = e.target.name;
+    setProfileForm((profileForm) => ({
+      ...profileForm,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    calls.post(profileForm);
+    await postData(profileForm);
   };
 
   return (

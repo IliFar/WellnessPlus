@@ -1,11 +1,10 @@
 {
-  "profile": [
+  "profile": [],
+  "signup": [
     {
-      "age": 0,
-      "weight": 0,
-      "height": 0,
-      "address": "qewrewrweqrqwer",
-      "image": " ",
+      "username": "Axel",
+      "lastName": "Freaks",
+      "password": "aqwqwer",
       "id": 1
     }
   ]
