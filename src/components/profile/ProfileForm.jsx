@@ -18,13 +18,13 @@ const ProfileForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await postData(profileForm);
+  const handleSubmit = (e) => {
+    postData(profileForm);
   };
 
   return (
     <>
+      <h1>Please fill in the informations below for better experience.</h1>
       <form className="profile-form" onSubmit={handleSubmit}>
         <div className="profile-form-inputs">
           <label htmlFor="age">Age</label>

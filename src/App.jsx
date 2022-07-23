@@ -17,7 +17,7 @@ const App = () => {
   }, []);
 
   const length = user.length <= 0;
-  console.log(length);
+  // console.log(length);
 
   return (
     <>

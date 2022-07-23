@@ -16,7 +16,7 @@ const ProfileHeader = (props) => {
           alt=""
           className="profile-img"
         />
-        <h2>{`${data.map((item) => item.username)} ${data.map((item) => item.lastName)}`}</h2>
+        <h2>{`${data.map((item) => item.username.toUpperCase())} ${data.map((item) => item.lastName.toUpperCase())}`}</h2>
       </div>
     </>
   );

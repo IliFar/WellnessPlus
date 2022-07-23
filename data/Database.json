@@ -1,11 +1,4 @@
 {
   "profile": [],
-  "signup": [
-    {
-      "username": "Axel",
-      "lastName": "Freaks",
-      "password": "aqwqwer",
-      "id": 1
-    }
-  ]
+  "signup": []
 }

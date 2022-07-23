@@ -14,8 +14,8 @@ const SignupForm = () => {
     setSignupForm((signupForm) => ({ ...signupForm, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    await postData(signupForm);
+  const handleSubmit = (e) => {
+    postData(signupForm);
   };
 
   return (

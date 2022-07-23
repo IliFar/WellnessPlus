@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProfileForm from "./ProfileForm";
 import ProfileHeader from "./ProfileHeader";
 import "./Profile.css";
+import { getData } from "../../../api_req/profileReqs";
+import ProfileInfo from "./ProfileInfo";
+import BMI from "./BMI";
 
 const Profile = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData(setData);
+  }, []);
+
+  const length = data.length <= 0;
+  // console.log(length);
+
   return (
     <>
       <h1>Profile</h1>
       <div className="profile">
         <ProfileHeader />
-        <ProfileForm />
+        {length ? <ProfileForm /> : <ProfileInfo />}
+        
       </div>
     </>
   );

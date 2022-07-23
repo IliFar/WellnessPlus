@@ -4,7 +4,7 @@ const url = " http://localhost:8000/profile";
 
 const getData = async (setData) => {
     await axios.get(url)
-        .then(res => {
+        .then((res) => {
             const data = res.data;
             console.log(data);
             setData(data);
