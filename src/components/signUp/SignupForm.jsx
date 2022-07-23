@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { postData } from "../../../api_req/signupReqs";
+import Button from "../element_components/Button";
 
 const SignupForm = () => {
   const [signupForm, setSignupForm] = useState({
@@ -57,9 +58,7 @@ const SignupForm = () => {
             placeholder=" Password"
           />
         </div>
-        <button className="signup-form-btn" type="submit">
-          Sign Up
-        </button>
+        <Button class="signup-form-btn" type="submit">Sign Up</Button>
       </form>
     </>
   );

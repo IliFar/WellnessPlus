@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getData } from "../../../api_req/profileReqs";
+import Button from "../element_components/Button";
 
 const BMI = () => {
   const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ const BMI = () => {
 
   return (
     <>
-      {!bmi && <button onClick={handleClick} className="bmi-btn">Calculate Your BMI</button>}
+      {!bmi && <Button class="bmi-btn" type="submit" onClick={handleClick}>Calculate Your BMI</Button>}
       {bmi && (
         <div>
           Your Body Mass Index is {bmi.toFixed(2)} so your weight is in the {bmiRange} category.

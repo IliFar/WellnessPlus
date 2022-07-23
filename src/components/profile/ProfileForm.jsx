@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { postData } from "../../../api_req/profileReqs";
+import Button from "../element_components/Button";
+import Input from "../element_components/Input";
 
 const ProfileForm = () => {
   const [profileForm, setProfileForm] = useState({
@@ -24,11 +26,11 @@ const ProfileForm = () => {
 
   return (
     <>
-      <h1>Please fill in the informations below for better experience.</h1>
+      <h3>Please fill in the informations below for better experience.</h3>
       <form className="profile-form" onSubmit={handleSubmit}>
         <div className="profile-form-inputs">
           <label htmlFor="age">Age</label>
-          <input
+          <Input
             type="number"
             id="age"
             name="age"
@@ -41,7 +43,7 @@ const ProfileForm = () => {
         </div>
         <div className="profile-form-inputs">
           <label htmlFor="weight">Weight (kg)</label>
-          <input
+          <Input
             type="number"
             id="weight"
             name="weight"
@@ -54,7 +56,7 @@ const ProfileForm = () => {
 
         <div className="profile-form-inputs">
           <label htmlFor="height">Height (cm)</label>
-          <input
+          <Input
             type="number"
             id="height"
             name="height"
@@ -67,7 +69,7 @@ const ProfileForm = () => {
 
         <div className="profile-form-inputs">
           <label htmlFor="address">Address</label>
-          <input
+          <Input
             type="text"
             id="address"
             name="address"
@@ -78,9 +80,9 @@ const ProfileForm = () => {
           />
         </div>
 
-        <button type="submit" className="profile-form-btn">
+        <Button class="profile-form-btn" type="submit">
           Submit
-        </button>
+        </Button>
       </form>
     </>
   );
