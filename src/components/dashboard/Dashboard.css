@@ -11,7 +11,8 @@
 }
 
 .dashboard-card {
-    background-color: var(--bg-color-variant);
+    background: rgb(9,9,121);
+    background: radial-gradient(circle, rgba(9,9,121,1) 12%, rgba(0,212,255,1) 100%);
     padding: 20px;
     border-radius: 10px;
     flex: 1 1 25%;
@@ -21,7 +22,8 @@
     gap: 50px;
 }
 .dashboard-card:hover {
-    background-color: var(--primary-color);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 .title-icon {
     display: flex;

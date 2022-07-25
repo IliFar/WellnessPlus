@@ -31,7 +31,6 @@ const ProfileInfo = () => {
           ))}
         </tbody>
       </table>
-
       <BMI />
     </>
   );

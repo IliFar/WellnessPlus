@@ -14,7 +14,6 @@ const Profile = () => {
   }, []);
 
   const length = data.length <= 0;
-  // console.log(length);
 
   return (
     <>
@@ -22,7 +21,6 @@ const Profile = () => {
       <div className="profile">
         <ProfileHeader />
         {length ? <ProfileForm /> : <ProfileInfo />}
-        
       </div>
     </>
   );

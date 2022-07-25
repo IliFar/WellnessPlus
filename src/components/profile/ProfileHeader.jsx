@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getData } from "../../../api_req/signupReqs";
 
-const ProfileHeader = (props) => {
+const ProfileHeader = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,11 @@ const ProfileHeader = (props) => {
           alt=""
           className="profile-img"
         />
-        <h2>{`${data.map((item) => item.username.toUpperCase())} ${data.map((item) => item.lastName.toUpperCase())}`}</h2>
+        <h2>
+          {data &&
+            `${data.map((item) => item.username)} ${data.map(
+              (item) => item.lastName)}`}
+        </h2>
       </div>
     </>
   );

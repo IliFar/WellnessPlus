@@ -21,7 +21,8 @@ const ProfileForm = () => {
   };
 
   const handleSubmit = (e) => {
-    postData(profileForm);
+    const formData = new FormData();
+    postData(profileForm, setProfileForm);
   };
 
   return (

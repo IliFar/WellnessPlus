@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Contact from "./components/contact/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/dashboard/Dashboard";
 import Header from "./components/header/Header";
 import Profile from "./components/profile/Profile";
@@ -25,15 +26,19 @@ const App = () => {
         <SignUp />
       ) : (
         <>
-          <Header />
-          <div className="container d-flex flex-column justify-content-center align-items-center">
-            {/* <Dashboard /> */}
-            <Profile />
-            <Statistics />
-            <Recipes />
-            <SavedRecipes />
-            <Contact />
-          </div>
+          <Router>
+            <Header />
+            <div className="container d-flex flex-column justify-content-center align-items-center">
+              <Routes>
+                <Route path="/" element={<Dashboard/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/statistics" element={<Statistics/>}/>
+                <Route path="/recipes" element={<Recipes/>}/>
+                <Route path="/savedrecipes" element={<SavedRecipes/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+              </Routes>
+            </div>
+          </Router>
         </>
       )}
     </>

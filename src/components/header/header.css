@@ -23,3 +23,9 @@
 .icon:hover {
     color: var(--primary-color);
 }
+.link {
+    color: white;
+}
+.link:active {
+    color: var(--primary-color);;
+}

@@ -16,7 +16,7 @@ const SignupForm = () => {
   };
 
   const handleSubmit = (e) => {
-    postData(signupForm);
+    postData(signupForm, setSignupForm);
   };
 
   return (
@@ -58,7 +58,9 @@ const SignupForm = () => {
             placeholder=" Password"
           />
         </div>
-        <Button class="signup-form-btn" type="submit">Sign Up</Button>
+        <Button class="signup-form-btn" type="submit">
+          Sign Up
+        </Button>
       </form>
     </>
   );

@@ -3,7 +3,7 @@ import "./Dashboard.css";
 
 const DashboardCards = (props) => {
   return (
-    <div className='dashboard-card'>
+    <div className='dashboard-card' onClick={props.onClick}>
       <div className="title-icon">
         <h4>{props.title}</h4>
         <div className="dashboard-icon">
