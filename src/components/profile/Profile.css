@@ -1,0 +1,79 @@
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+    min-width: 80%;
+    max-width: 80%;
+    gap: 50px;
+    padding: 50px;
+    background-color: var(--bg-color);
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(116, 163, 230, 0.8);
+    padding: 70px;
+    border: 2px solid white;
+    border-radius: 10px;
+    align-items: center;
+}
+.profile-form-inputs {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 70%;
+}
+.profile-form-input {
+    border: 2px solid aqua;
+    border-radius: 10px;
+}
+.profile-img {
+    border: 5px solid white;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 50px;
+    border: 2px solid white;
+    max-width: 55%;
+}
+.profile-header:hover {
+    background-color: var(--primary-color);
+}
+.profile-form-btn {
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    width: 60%;
+}
+.profile-form-btn:hover {
+    background-color: var(--primary-color-variant);
+}
+
+table, th, td {
+    border: 1px solid white;
+    text-align: center;
+}
+
+.bmi-btn {
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    width: 30%;
+}
+
+.bmi-btn:hover {
+    background-color: var(--primary-color-variant);
+}
