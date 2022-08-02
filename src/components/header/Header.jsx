@@ -17,7 +17,7 @@ const Header = () => {
             {icons.goPerson}
           </Link>
         </div>
-        <div className="statistics icon" title="Statistics">
+        <div className="stats icon" title="Statistics">
           <Link to="/statistics" className="link">
             {icons.stats}
           </Link>
