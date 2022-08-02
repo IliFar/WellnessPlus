@@ -24,3 +24,14 @@
 .p {
     color: black;
 }
+.rec-recipes {
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    width: 60%;
+}
+.rec-recipes:hover {
+    background-color: var(--primary-color-variant);
+}

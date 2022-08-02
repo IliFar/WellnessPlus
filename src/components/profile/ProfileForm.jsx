@@ -27,7 +27,7 @@ const ProfileForm = () => {
 
   return (
     <>
-      <h3>Please fill in the informations below for better experience.</h3>
+      <h3 className="form-title">Please fill in the informations below for better experience.</h3>
       <form className="profile-form" onSubmit={handleSubmit}>
         <div className="profile-form-inputs">
           <label htmlFor="age">Age</label>

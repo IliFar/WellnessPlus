@@ -1,13 +1,5 @@
 {
-  "profile": [
-    {
-      "age": "0987",
-      "weight": "987",
-      "height": "987",
-      "address": "987",
-      "id": 1
-    }
-  ],
+  "profile": [],
   "signup": [
     {
       "username": "qwer",

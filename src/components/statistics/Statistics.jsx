@@ -4,13 +4,21 @@ import { Chart, registerables } from "chart.js";
 import BarChart from "../element_components/BarChart";
 import StatisticsChartUI from "./StatisticsChartUI";
 import "./Statistics.css";
+import Button from "../element_components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Statistics = () => {
   const [nutrients, setNutrients] = useState([]);
 
+  let navigate = useNavigate();
+
   useEffect(() => {
     axiosGet(setNutrients);
   }, []);
+
+  const navigateToRecipes = () => {
+    navigate("/recipes")
+  }
 
   return (
     <>
@@ -21,7 +29,7 @@ const Statistics = () => {
         <div className="chart">
         {nutrients && <StatisticsChartUI nutrients={nutrients} />}
         </div>
-        <button>Wow</button>
+        <Button class="rec-recipes" type="submit" onClick={navigateToRecipes}>Recommended Recipes</Button>
       </div>
     </>
   );

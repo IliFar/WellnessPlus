@@ -8,7 +8,8 @@
     max-width: 80%;
     gap: 50px;
     padding: 50px;
-    background-color: var(--bg-color);
+    background: rgb(34,121,195);
+    background: linear-gradient(4deg, rgba(34,121,195,1) 6%, rgba(255,255,255,1) 95%);
 }
 .profile-form {
     display: flex;
@@ -32,7 +33,7 @@
     border-radius: 10px;
 }
 .profile-img {
-    border: 5px solid white;
+    border: 2px solid black;
     border-radius: 100%;
     width: 100px;
     height: 100px;
@@ -42,8 +43,9 @@
     align-items: center;
     gap: 30px;
     border-radius: 50px;
-    border: 2px solid white;
+    border: 2px solid black;
     max-width: 55%;
+    color: black;
 }
 .profile-header:hover {
     background-color: var(--primary-color);
@@ -76,4 +78,7 @@ table, th, td {
 
 .bmi-btn:hover {
     background-color: var(--primary-color-variant);
+}
+.form-title {
+    color: black;
 }
