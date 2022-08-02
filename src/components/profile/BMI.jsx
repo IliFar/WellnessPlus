@@ -32,11 +32,15 @@ const BMI = () => {
 
   return (
     <>
-      {!bmi && <Button class="bmi-btn" type="submit" onClick={handleClick}>Calculate Your BMI</Button>}
-      {bmi && (
+      {bmi ? (
         <div>
-          Your Body Mass Index is {bmi.toFixed(2)} so your weight is in the {bmiRange} category.
+          Your Body Mass Index is {bmi.toFixed(2)} so your weight is in the{" "}
+          {bmiRange} category.
         </div>
+      ) : (
+        <Button class="bmi-btn" type="submit" onClick={handleClick}>
+          Calculate Your BMI
+        </Button>
       )}
     </>
   );
