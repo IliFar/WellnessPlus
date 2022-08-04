@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import getRecipesData from "../../../api_req/recipesReqs";
+import RecipesCard from "./RecipesCard";
 
 const Recipes = () => {
-  return (
-    <div>Recipes</div>
-  )
-}
+  const [data, setData] = useState([]);
 
-export default Recipes
+  return <RecipesCard />;
+};
+
+export default Recipes;
