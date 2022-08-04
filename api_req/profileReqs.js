@@ -1,13 +1,13 @@
 import axios from "axios";
 const url = " http://localhost:8000/profile";
 
-const getData = async (setData) => {
+const getProfileData = async (setData) => {
   await axios.get(url).then((res) => {
     const data = res.data;
     setData(data);
   });
 };
-const postData = async (data, setData) => {
+const postProfileData = async (data, setData) => {
   // const response = await axios.post(url, data);
   // setData([...data, response.data])
 
@@ -16,8 +16,8 @@ const postData = async (data, setData) => {
 };
 
 const calls = {
-  get: getData,
-  post: postData,
+  get: getProfileData,
+  post: postProfileData,
 };
 
-export { getData, postData };
+export { getProfileData, postProfileData };

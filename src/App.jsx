@@ -8,13 +8,13 @@ import Recipes from "./components/recipes/Recipes";
 import SavedRecipes from "./components/savedRecipes/SavedRecipes";
 import SignUp from "./components/signUp/SignUp";
 import Statistics from "./components/statistics/Statistics";
-import { getData } from "../api_req/signupReqs";
+import { getUserData } from "../api_req/signupReqs";
 
 const App = () => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    getData(setUser);
+    getUserData(setUser);
   }, []);
 
   const length = user.length <= 0;

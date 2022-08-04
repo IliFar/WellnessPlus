@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { postData } from "../../../api_req/profileReqs";
+import { postProfileData } from "../../../api_req/profileReqs";
 import Button from "../element_components/Button";
 import Input from "../element_components/Input";
 
@@ -22,7 +22,7 @@ const ProfileForm = () => {
 
   const handleSubmit = (e) => {
     const formData = new FormData();
-    postData(profileForm, setProfileForm);
+    postProfileData(profileForm, setProfileForm);
   };
 
   return (

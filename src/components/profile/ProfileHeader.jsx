@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getData } from "../../../api_req/signupReqs";
+import { getUserData } from "../../../api_req/signupReqs";
 
 const ProfileHeader = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getData(setData);
+    getUserData(setData);
   }, []);
 
   return (
@@ -19,7 +19,8 @@ const ProfileHeader = () => {
         <h2>
           {data &&
             `${data.map((item) => item.username)} ${data.map(
-              (item) => item.lastName)}`}
+              (item) => item.lastName
+            )}`}
         </h2>
       </div>
     </>

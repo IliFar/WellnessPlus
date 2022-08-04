@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { getData } from "../../../api_req/profileReqs";
+import { getProfileData } from "../../../api_req/profileReqs";
 import BMI from "./BMI";
 
 const ProfileInfo = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getData(setData);
+    getProfileData(setData);
   }, []);
 
   return (

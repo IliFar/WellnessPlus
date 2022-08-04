@@ -1,7 +1,7 @@
 import axios from "axios";
 const url = " http://localhost:8000/signup";
 
-const getData = async (setData) => {
+const getUserData = async (setData) => {
   await axios
     .get(url)
     .then((res) => {
@@ -12,14 +12,14 @@ const getData = async (setData) => {
       console.log(error);
     });
 };
-const postData = async (data, setData) => {
+const postUserData = async (data, setData) => {
   await axios.post(url, data);
   setData(data);
 };
 
 const calls = {
-  get: getData,
-  post: postData,
+  get: getUserData,
+  post: postUserData,
 };
 
-export { getData, postData };
+export { getUserData, postUserData };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axiosGet from "../../../api_req/statisticsReqs";
+import GetNutrients from "../../../api_req/statisticsReqs";
 import { Chart, registerables } from "chart.js";
 import BarChart from "../element_components/BarChart";
 import StatisticsChartUI from "./StatisticsChartUI";
@@ -13,12 +13,12 @@ const Statistics = () => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    axiosGet(setNutrients);
+    GetNutrients(setNutrients);
   }, []);
 
   const navigateToRecipes = () => {
-    navigate("/recipes")
-  }
+    navigate("/recipes");
+  };
 
   return (
     <>
@@ -27,9 +27,11 @@ const Statistics = () => {
         <h4 className="h4">Here is your nutrients statistics RDV</h4>
         <p className="p">Recommended Daily Value</p>
         <div className="chart">
-        {nutrients && <StatisticsChartUI nutrients={nutrients} />}
+          {nutrients && <StatisticsChartUI nutrients={nutrients} />}
         </div>
-        <Button class="rec-recipes" type="submit" onClick={navigateToRecipes}>Recommended Recipes</Button>
+        <Button class="rec-recipes" type="submit" onClick={navigateToRecipes}>
+          Recommended Recipes
+        </Button>
       </div>
     </>
   );

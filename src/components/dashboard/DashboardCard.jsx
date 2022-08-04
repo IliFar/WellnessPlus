@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Dashboard.css";
 
-const DashboardCards = (props) => {
+const DashboardCard = (props) => {
   return (
     <div className='dashboard-card' onClick={props.onClick}>
       <div className="title-icon">
@@ -17,4 +17,4 @@ const DashboardCards = (props) => {
   )
 }
 
-export default DashboardCards
+export default DashboardCard

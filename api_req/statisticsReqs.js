@@ -1,12 +1,16 @@
 import axios from "axios";
+const url = "https://apimocha.com/wellnessplus/nutrients";
 
-async function axiosGet(setNutrients) {
-    await axios
-      .get("https://apimocha.com/wellnessplus/nutrients")
-      .then((res) => {
-        const data = res.data;
-        console.log(data)
-        setNutrients(data);
-      });
-  }
-export default axiosGet;
+const GetNutrients = async (setNutrients) => {
+  await axios
+    .get(url)
+    .then((res) => {
+      const data = res.data;
+      console.log(data);
+      setNutrients(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+export default GetNutrients;

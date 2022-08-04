@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProfileForm from "./ProfileForm";
 import ProfileHeader from "./ProfileHeader";
 import "./Profile.css";
-import { getData } from "../../../api_req/profileReqs";
+import { getProfileData } from "../../../api_req/profileReqs";
 import ProfileInfo from "./ProfileInfo";
 import BMI from "./BMI";
 
@@ -10,7 +10,7 @@ const Profile = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getData(setData);
+    getProfileData(setData);
   }, []);
 
   const length = data.length <= 0;

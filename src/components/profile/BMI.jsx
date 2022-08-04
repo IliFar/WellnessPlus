@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getData } from "../../../api_req/profileReqs";
+import { getProfileData } from "../../../api_req/profileReqs";
 import Button from "../element_components/Button";
 
 const BMI = () => {
@@ -8,7 +8,7 @@ const BMI = () => {
   const [bmiRange, setBmiRange] = useState("");
 
   useEffect(() => {
-    getData(setData);
+    getProfileData(setData);
   }, []);
 
   const handleClick = () => {

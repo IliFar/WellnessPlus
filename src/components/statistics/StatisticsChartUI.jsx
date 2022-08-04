@@ -22,7 +22,7 @@ const StatisticsChartUI = (props) => {
         borderWidth: 1,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: props.nutrients.map((rec) => rec.DailyValue),
+        data: props.nutrients.map((rec) => rec.DailyValue), 
       },
     ],
   };

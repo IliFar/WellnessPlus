@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { postData } from "../../../api_req/signupReqs";
+import { postUserData } from "../../../api_req/signupReqs";
 import Button from "../element_components/Button";
 
 const SignupForm = () => {
@@ -16,7 +16,7 @@ const SignupForm = () => {
   };
 
   const handleSubmit = (e) => {
-    postData(signupForm, setSignupForm);
+    postUserData(signupForm, setSignupForm);
   };
 
   return (
