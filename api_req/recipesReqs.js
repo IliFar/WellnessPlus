@@ -2,12 +2,12 @@ import axios from "axios";
 
 const BASE_URL = "https://api.spoonacular.com/recipes/"
 
-const getRecipesData = async () => {
-    await axios.get(`${BASE_URL}/complexSearch?apiKey=${process.env.API_KEY}&number=9&cuisine=mediterranean`)
+const getRecipesData = async (setData) => {
+    await axios.get(`${BASE_URL}/random?apiKey=${process.env.API_KEY}&number=9`)
     .then((res) => {
         const data = res.data;
         console.log(data);
-        
+        setData(data.recipes);
     })
     .catch((error) => {
         console.log(error);
