@@ -22,7 +22,7 @@ const Header = () => {
             {icons.stats}
           </Link>
         </div>
-        <div className="recipes icon" title="Recipes">
+        <div className=" icon" title="Recipes">
           <Link to="/recipes" className="link">
             {icons.biDish}
           </Link>
