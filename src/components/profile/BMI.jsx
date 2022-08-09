@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getProfileData } from "../../../api_req/profileReqs";
+import { AppContext } from "../../../context/appContext";
 import Button from "../element_components/Button";
 
 const BMI = () => {
-  const [data, setData] = useState([]);
-  const [bmi, setBMI] = useState(null);
-  const [bmiRange, setBmiRange] = useState("");
-
-  useEffect(() => {
-    getProfileData(setData);
-  }, []);
+  const { profileData, bmi, setBMI, bmiRange, setBmiRange } =
+    useContext(AppContext);
 
   const handleClick = () => {
-    const height = data.map((item) => item.height);
+    const height = profileData.map((item) => item.height);
     const heightInMeters = height / 100;
-    const weight = data.map((item) => item.weight);
+    const weight = profileData.map((item) => item.weight);
 
     const calculateBMI = weight / Math.pow(heightInMeters, 2);
     setBMI(calculateBMI);
