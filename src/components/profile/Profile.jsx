@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProfileForm from "./ProfileForm";
 import ProfileHeader from "./ProfileHeader";
 import "./Profile.css";
 import { getProfileData } from "../../../api_req/profileReqs";
 import ProfileInfo from "./ProfileInfo";
 import BMI from "./BMI";
+import { AppContext } from "../../../context/appContext";
 
 const Profile = () => {
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    getProfileData(setData);
-  }, []);
+  const {profileData} = useContext(AppContext);
 
-  const length = data.length <= 0;
+  const length = profileData.length <= 0;
 
   return (
     <>
