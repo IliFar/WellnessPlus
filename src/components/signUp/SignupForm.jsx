@@ -9,13 +9,17 @@ const SignupForm = () => {
     lastName: "",
     password: "",
   });
-
+  
+  useEffect(() => {
+    handleSubmit;
+  })
+  
   const handleInput = (e) => {
     const value = e.target.value;
     const name = e.target.name;
     setSignupForm((signupForm) => ({ ...signupForm, [name]: value }));
   };
-
+  
   const handleSubmit = (e) => {
     postUserData(signupForm, setSignupForm);
   };
