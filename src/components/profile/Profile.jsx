@@ -11,7 +11,7 @@ const Profile = () => {
 
   const {profileData} = useContext(AppContext);
 
-  const length = profileData.length <= 0;
+  const length = profileData.length == 0;
 
   return (
     <>
