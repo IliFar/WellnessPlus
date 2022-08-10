@@ -14,6 +14,7 @@ const RecipeDetails = () => {
   return (
     <>
       <RecipesCard image={details.image} title={details.title} />
+
     </>
   );
 };
