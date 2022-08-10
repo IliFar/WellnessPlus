@@ -8,9 +8,9 @@ const RecipesCard = (props) => {
       <div className="recipe-header">
         <img src={props.image} />
       </div>
-      <div className="recipes-title">
-        <h5>{props.title}</h5>
-      </div>
+        <div className="recipes-title">
+          <h5>{props.title}</h5>
+        </div>
     </div>
   );
 };
