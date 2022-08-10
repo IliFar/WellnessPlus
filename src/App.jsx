@@ -49,12 +49,12 @@ const App = () => {
             <div className="container d-flex flex-column justify-content-center align-items-center">
               <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/statistics" element={<Statistics />} />
-                <Route path="/recipes" element={<Recipes />} />
-                <Route path="/recipes/:id" element={<RecipeDetails />} />
-                <Route path="/savedrecipes" element={<SavedRecipes />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="profile" element={<Profile />} />
+                <Route path="statistics" element={<Statistics />} />
+                <Route path="recipes" element={<Recipes />} />
+                <Route path="recipes/:id" element={<RecipeDetails />} />
+                <Route path="savedrecipes" element={<SavedRecipes />} />
+                <Route path="contact" element={<Contact />} />
               </Routes>
             </div>
           </Router>
