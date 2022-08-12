@@ -4,24 +4,28 @@
 #### Run the commands : 
 1) *npm install*
 2) *npx json-server --watch data/Database.json --port 8000*
-3) *npm start*
+3) *npm start* 
 
 ## To Test the requirements
-*9* Go to the profile component and its children.
-*10* Go to Signup component or to the profile component and its children.
-*11* Go to the api_req folder.
-*12* Go to Signup component or Profile componenet and its children, Data is saved to the url.
-*13* Go to ProfileForm or SingupForm. 
-*14* Go to Profile, ProfileHeader, and App components.
+*3* Go to src/components/error_boundry folder. Implementation is in the App component.
+*4* go to element_components folder & to dashboardCard component in dashboard folder.
+*5* Go to element_components.
+*6* Go to the App component.
+*7* Go to api_req folder.
+*8*
 
 ## Externa bibliotek
-***React***
-***ReactDOM** to manipulate the DOM
-***Axios*** To make requests to the APIs (json-server)
-***react-icons*** To use icons
-***React-router-dom*** To create routes to the different components
-***parcel*** Bundler to transpile jsx and javascript code.
+***React***.__
+***ReactDOM*** to manipulate the DOM.__
+***Axios*** To make requests to the APIs.__
+***react-icons*** To use icons.__
+***React-router-dom*** To create routes to the different components.__
+***parcel*** Bundler to transpile jsx and javascript code.__
+***chart.js*** A library for creating charts UI.__
+***react-chartjs-2*** To connect react application and Chart.js.__
+***prop-types*** A library to check the type of props passed to a component.__
 
-## API
-*URL* http://localhost:8000/
-*EndPoints* : /profile, /signup, /
+## APIs
+*URL* : http://localhost:8000/ *EndPoints* : /profile, /signup__
+*URL* : https://apimocha.com/wellnessplus/nutrients__
+*URL* : https://api.spoonacular.com/recipes__
