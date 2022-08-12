@@ -3,14 +3,11 @@ import { getRecipesData, getRecipeById } from "../../../api_req/recipesReqs";
 import RecipesCard from "./RecipesCard";
 import icons from "../icons/Icons";
 import { Outlet, useNavigate } from "react-router-dom";
+import RecipesLogic from "./RecipesLogic";
 
 const Recipes = () => {
-  const [data, setData] = useState([]);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    getRecipesData(setData);
-  }, []);
+  const {data} = RecipesLogic();
 
   return (
     <>
@@ -24,7 +21,7 @@ const Recipes = () => {
               title={recipe.title}
               icon={icons.biDish}
               onClick={() => {
-                navigate(`/recipes/${recipe.id}`);
+                navigate(`/recipes/${recipe.id}`)
               }}
             />
           );
