@@ -22,6 +22,9 @@ const getRecipeById = async (id, setDetails) => {
       const recipe = res.data;
       console.log(recipe);
       setDetails(recipe);
+    })
+    .catch((error) => {
+      console.log(error);
     });
 };
 export { getRecipesData, getRecipeById };

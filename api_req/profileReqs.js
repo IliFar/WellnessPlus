@@ -5,12 +5,12 @@ const getProfileData = async (setData) => {
   await axios.get(url).then((res) => {
     const data = res.data;
     setData(data);
+  })
+  .catch((error) => {
+    console.log(error);
   });
 };
 const postProfileData = async (data, setData) => {
-  // const response = await axios.post(url, data);
-  // setData([...data, response.data])
-
   await axios.post(url, data);
   setData(data);
 };
