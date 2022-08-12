@@ -1,64 +1,49 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getRecipeById } from "../../../api_req/recipesReqs";
 import Button from "../element_components/Button";
 import RecipesCard from "../recipes/RecipesCard";
+import RecipeDetailsLogic from "./RecipeDetailsLogic";
 
 const RecipeDetails = () => {
-  const [details, setDetails] = useState({});
-  const [activeTab, setActiveTab] = useState("description");
-  let params = useParams();
-
-  useEffect(() => {
-    getRecipeById(params.id, setDetails);
-  }, []);
+  const {
+    descriptionClassName,
+    ingredientsClassName,
+    instructionsClassName,
+    handle_Description_Button_Click,
+    handle_Ingredients_Button_Click,
+    handle_Instructions_Button_Click,
+    showContent,
+    image,
+    title,
+  } = RecipeDetailsLogic();
 
   return (
     <>
       <h1>Recipe Details</h1>
       <div className="recipe-details">
-        <RecipesCard image={details.image} title={details.title} />
+        <RecipesCard image={image} title={title} />
         <div className="recipe-info">
           <div className="recipe-btns">
             <Button
-              class={`recipe-btn ${
-                activeTab === "description" ? "active" : ""
-              }`}
-              onClick={() => setActiveTab("description")}
+              class={descriptionClassName}
+              onClick={handle_Description_Button_Click}
             >
               Description
             </Button>
             <Button
-              class={`recipe-btn ${
-                activeTab === "ingredients" ? "active" : ""
-              }`}
-              onClick={() => setActiveTab("ingredients")}
+              class={ingredientsClassName}
+              onClick={handle_Ingredients_Button_Click}
             >
               Ingredients
             </Button>
             <Button
-              class={`recipe-btn ${
-                activeTab === "instructions" ? "active" : ""
-              }`}
-              onClick={() => setActiveTab("instructions")}
+              class={instructionsClassName}
+              onClick={handle_Instructions_Button_Click}
             >
               How To Make
             </Button>
           </div>
           <div className="recipe-info-d">
-            {activeTab === "description" && (
-              <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-            )}
-            {activeTab === "instructions" && (
-              <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
-            )}
-            {activeTab === "ingredients" && (
-              <ul>
-                {details.extendedIngredients?.map((ingredient) => (
-                  <li key={ingredient.id}>{ingredient.original}</li>
-                ))}
-              </ul>
-            )}
+            {showContent()}
           </div>
         </div>
       </div>
