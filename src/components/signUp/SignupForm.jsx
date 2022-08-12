@@ -12,7 +12,7 @@ const SignupForm = () => {
   
   useEffect(() => {
     handleSubmit;
-  })
+  }, [])
   
   const handleInput = (e) => {
     const value = e.target.value;
