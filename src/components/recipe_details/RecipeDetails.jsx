@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRecipeById } from "../../../api_req/recipesReqs";
 import Button from "../element_components/Button";
-import RecipesCard from "./RecipesCard";
+import RecipesCard from "../recipes/RecipesCard";
 
 const RecipeDetails = () => {
   const [details, setDetails] = useState({});

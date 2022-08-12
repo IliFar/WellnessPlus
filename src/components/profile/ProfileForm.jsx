@@ -11,10 +11,7 @@ const ProfileForm = () => {
     address: "",
   });
 
-  useEffect(() => {
-    handleSubmit;
-  })
-
+  
   const handleInput = (e) => {
     const value = e.target.value;
     const name = e.target.name;
@@ -23,6 +20,10 @@ const ProfileForm = () => {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    handleSubmit;
+  })
   const handleSubmit = (e) => {
     postProfileData(profileForm, setProfileForm);
   };

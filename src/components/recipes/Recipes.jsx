@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getRecipesData, getRecipeById } from "../../../api_req/recipesReqs";
 import RecipesCard from "./RecipesCard";
 import icons from "../icons/Icons";
-import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Recipes = () => {
   const [data, setData] = useState([]);
@@ -11,12 +11,6 @@ const Recipes = () => {
   useEffect(() => {
     getRecipesData(setData);
   }, []);
-
-  const handleClick = (id) => {
-    data.map((recipe) => {
-      navigate(`/recipes/${recipe.id}`);
-    });
-  };
 
   return (
     <>
