@@ -6,12 +6,10 @@ import { getProfileData } from "../../../api_req/profileReqs";
 import ProfileInfo from "./ProfileInfo";
 import BMI from "./BMI";
 import { AppContext } from "../../../context/appContext";
+import ProfileLogic from "./logic/ProfileLogic";
 
 const Profile = () => {
-
-  const {profileData} = useContext(AppContext);
-
-  const length = profileData.length == 0;
+  const { length } = ProfileLogic();
 
   return (
     <>
