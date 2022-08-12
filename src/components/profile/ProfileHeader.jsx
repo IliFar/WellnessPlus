@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useContext} from "react";
-import { getUserData } from "../../../api_req/signupReqs";
+import React, { useContext} from "react";
 import { AppContext } from "../../../context/appContext";
 
 const ProfileHeader = () => {
