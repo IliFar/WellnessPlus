@@ -12,7 +12,7 @@
 *5* Go to element_components.
 *6* Go to the App component.
 *7* Go to api_req folder.
-*8*
+*8* Go to the components' logic.
 
 ## Externa bibliotek
 ***React***.__
