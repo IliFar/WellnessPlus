@@ -4,6 +4,8 @@ import RecipesCard from "./RecipesCard";
 import icons from "../icons/Icons";
 import { Outlet, useNavigate } from "react-router-dom";
 import RecipesLogic from "./RecipesLogic";
+import "./Recipes.css";
+
 
 const Recipes = () => {
   const navigate = useNavigate();
