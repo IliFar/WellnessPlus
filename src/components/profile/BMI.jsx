@@ -4,6 +4,7 @@ import { AppContext } from "../../../context/appContext";
 import Button from "../element_components/Button";
 import BMILogic from "./logic/BMILogic";
 
+// BMI : Body Mass Index
 const BMI = () => {
   const { bmi, bmiRange, handleClick } = BMILogic();
 
