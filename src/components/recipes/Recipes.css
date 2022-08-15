@@ -23,8 +23,9 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 5px;
-    max-width: 30%;
-    max-height: 400px;
+    width: 30%;
+    height: 250px;
+    transition: width 2s, height 2s, transform 2s;
 }
 .recipe-header {
     display: flex;
@@ -38,12 +39,15 @@
 .recipes-card:hover {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    width: 35%;
+  height: 300px;
+  /* transform: rotate(360deg); */
 }
 .recipes-title {
-    margin-top: 10px;    
+    margin-top: 10%; 
 }
 .recipes-title > h5 {
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
 }
 .recipe-details {
