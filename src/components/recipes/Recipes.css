@@ -25,7 +25,7 @@
     gap: 5px;
     width: 30%;
     height: 250px;
-    transition: width 2s, height 2s, transform 2s;
+    transition: 0.3s;
 }
 .recipe-header {
     display: flex;
@@ -39,13 +39,10 @@
 .recipes-card:hover {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    width: 35%;
-  height: 300px;
-  /* transform: rotate(360deg); */
+    transform: scale(1.2);
+  transform-origin: bottom;
 }
-.recipes-title {
-    margin-top: 10%; 
-}
+
 .recipes-title > h5 {
     font-size: 12px;
     text-align: center;
