@@ -15,8 +15,9 @@ import React from 'react'
 import PropTypes from "prop-types";
 
 const Input = (props) => {
+  const {type, id, name, step, className, value, onChange, placeholder} = props
   return (
-    <input type={props.type} id={props.id} name={props.name} step={props.step} required className={props.className} value={props.value} onChange={props.onChange} placeholder={props.placeholder}/>
+    <input type={type} id={id} name={name} step={step} required className={className} value={value} onChange={onChange} placeholder={placeholder}/>
   )
 }
 
