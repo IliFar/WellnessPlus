@@ -27,5 +27,5 @@
 
 ## APIs
 *URL* : http://localhost:8000/ *EndPoints* : /profile, /signup <br/>
-*URL* : https://apimocha.com/wellnessplus/nutrients <br/>
-*URL* : https://api.spoonacular.com/recipes
+*URL* : https://apimocha.com/wellnessplus/nutrients  *Api_mock_to_get_nutrients*<br/>
+*URL* : https://api.spoonacular.com/recipes *Provides_recipes*
