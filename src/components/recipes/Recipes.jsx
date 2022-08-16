@@ -6,15 +6,14 @@ import { Outlet, useNavigate } from "react-router-dom";
 import RecipesLogic from "./RecipesLogic";
 import "./Recipes.css";
 
-
 const Recipes = () => {
   const navigate = useNavigate();
-  const {data} = RecipesLogic();
+  const { data, error, MessageToDisplay } = RecipesLogic();
 
   return (
     <>
       <h1>Recipes</h1>
-      <div className="recipes">
+      <div className={`recipes`}>
         {data.map((recipe) => {
           return (
             <RecipesCard
@@ -23,13 +22,19 @@ const Recipes = () => {
               title={recipe.title}
               icon={icons.biDish}
               onClick={() => {
-                navigate(`/recipes/${recipe.id}`)
+                navigate(`/recipes/${recipe.id}`);
               }}
+              className={`recipes-card`}
             />
           );
         })}
+        {error && (
+          <div className="error">
+            <h2>{MessageToDisplay}</h2>
+            <span>{error}</span>
+          </div>
+        )}
       </div>
-
       <Outlet />
     </>
   );
