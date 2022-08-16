@@ -11,8 +11,7 @@ const RecipesLogic = () => {
     useEffect(() => {
       getRecipesData(setData, setError);
     }, []);
-  }
-  catch (err) {
+  } catch (err) {
     console.log(err);
     setError({ error: err.message });
   }
