@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { postData } from "../../../api_req/signupReqs";
+import { postUserData } from "../../../api_req/signupReqs";
 import Button from "../element_components/Button";
+import Input from "../element_components/Input";
 
 const SignupForm = () => {
   const [signupForm, setSignupForm] = useState({
@@ -8,22 +9,26 @@ const SignupForm = () => {
     lastName: "",
     password: "",
   });
-
+  
+  useEffect(() => {
+    handleSubmit;
+  }, [])
+  
   const handleInput = (e) => {
     const value = e.target.value;
     const name = e.target.name;
     setSignupForm((signupForm) => ({ ...signupForm, [name]: value }));
   };
-
+  
   const handleSubmit = (e) => {
-    postData(signupForm, setSignupForm);
+    postUserData(signupForm, setSignupForm);
   };
 
   return (
     <>
       <form onSubmit={handleSubmit} className="sign-up-form">
         <div className="signup-form-inputs">
-          <input
+          <Input
             type="text"
             id="username"
             className="signup-form-input"
@@ -35,7 +40,7 @@ const SignupForm = () => {
           />
         </div>
         <div className="signup-form-inputs">
-          <input
+          <Input
             type="text"
             id="lastName"
             className="signup-form-input"
@@ -47,7 +52,7 @@ const SignupForm = () => {
           />
         </div>
         <div className="signup-form-inputs">
-          <input
+          <Input
             type="password"
             id="password"
             className="signup-form-input"

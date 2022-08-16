@@ -7,7 +7,8 @@
     max-width: 80%;
     gap: 50px;
     padding: 50px;
-    background-color: var(--bg-color);
+    background: rgb(34,121,195);
+    background: linear-gradient(4deg, rgba(34,121,195,1) 6%, rgba(255,255,255,1) 71%);
 }
 
 .dashboard-card {

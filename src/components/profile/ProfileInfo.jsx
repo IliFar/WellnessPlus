@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { getData } from "../../../api_req/profileReqs";
+import React, { useContext } from "react";
+import { getProfileData } from "../../../api_req/profileReqs";
+import { AppContext } from "../../../context/appContext";
 import BMI from "./BMI";
 
 const ProfileInfo = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    getData(setData);
-  }, []);
+  const {profileData} = useContext(AppContext)
 
   return (
     <>
@@ -21,7 +18,7 @@ const ProfileInfo = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((info) => (
+          {profileData.map((info) => (
             <tr key={info.id}>
               <td>{info.age} Years Old</td>
               <td>{info.weight} kg</td>

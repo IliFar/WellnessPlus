@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { getData } from "../../../api_req/signupReqs";
+import React, { useContext} from "react";
+import { AppContext } from "../../../context/appContext";
 
 const ProfileHeader = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    getData(setData);
-  }, []);
+  const {user} = useContext(AppContext);
 
   return (
     <>
@@ -17,9 +13,10 @@ const ProfileHeader = () => {
           className="profile-img"
         />
         <h2>
-          {data &&
-            `${data.map((item) => item.username)} ${data.map(
-              (item) => item.lastName)}`}
+          {user &&
+            `${user.map((item) => item.username)} ${user.map(
+              (item) => item.lastName
+            )}`}
         </h2>
       </div>
     </>

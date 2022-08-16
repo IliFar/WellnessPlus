@@ -1,33 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { postData } from "../../../api_req/profileReqs";
+import { postProfileData } from "../../../api_req/profileReqs";
 import Button from "../element_components/Button";
 import Input from "../element_components/Input";
+import ProfileFormLogic from "./logic/ProfileFormLogic";
 
 const ProfileForm = () => {
-  const [profileForm, setProfileForm] = useState({
-    age: 0,
-    weight: 0,
-    height: 0,
-    address: "",
-  });
-
-  const handleInput = (e) => {
-    const value = e.target.value;
-    const name = e.target.name;
-    setProfileForm((profileForm) => ({
-      ...profileForm,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    const formData = new FormData();
-    postData(profileForm, setProfileForm);
-  };
+  const {profileForm, handleInput, handleSubmit} = ProfileFormLogic();
 
   return (
     <>
-      <h3>Please fill in the informations below for better experience.</h3>
+      <h3 className="form-title">Please fill in the informations below for better experience.</h3>
       <form className="profile-form" onSubmit={handleSubmit}>
         <div className="profile-form-inputs">
           <label htmlFor="age">Age</label>

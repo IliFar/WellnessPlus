@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProfileForm from "./ProfileForm";
 import ProfileHeader from "./ProfileHeader";
 import "./Profile.css";
-import { getData } from "../../../api_req/profileReqs";
 import ProfileInfo from "./ProfileInfo";
-import BMI from "./BMI";
+import ProfileLogic from "./logic/ProfileLogic";
 
 const Profile = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    getData(setData);
-  }, []);
-
-  const length = data.length <= 0;
+  const { length } = ProfileLogic();
 
   return (
     <>
