@@ -3,7 +3,7 @@ import "./Recipes.css";
 
 const RecipesCard = (props) => {
   return (
-    <div className="recipes-card" onClick={props.onClick}>
+    <div className={props.className} onClick={props.onClick}>
       <div className="recipe-header">
         <img src={props.image} />
       </div>
