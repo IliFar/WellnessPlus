@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import GetNutrients from "../../../api_req/statisticsReqs";
-import { Chart, registerables } from "chart.js";
-import BarChart from "../element_components/BarChart";
 import StatisticsChartUI from "./StatisticsChartUI";
 import "./Statistics.css";
 import Button from "../element_components/Button";
