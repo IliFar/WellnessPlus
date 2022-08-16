@@ -5,11 +5,19 @@ import { getRecipeById } from "../../../api_req/recipesReqs";
 const RecipeDetailsLogic = () => {
   const [details, setDetails] = useState({});
   const [activeTab, setActiveTab] = useState("description");
+  const [error, setError] = useState(undefined);
+
   let params = useParams();
 
-  useEffect(() => {
-    getRecipeById(params.id, setDetails);
-  }, []);
+  try {
+    useEffect(() => {
+      getRecipeById(params.id, setDetails, setError);
+    }, []);
+  } 
+  catch (err) {
+    console.log(err);
+    setError({error: err.message})
+  }
 
   let descriptionClassName = `recipe-btn ${
     activeTab === "description" ? "active" : ""
@@ -51,6 +59,8 @@ const RecipeDetailsLogic = () => {
     return <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>;
   };
 
+  const MessageToDisplay = "Try later or refresh the page";
+
   return {
     descriptionClassName,
     ingredientsClassName,
@@ -60,7 +70,9 @@ const RecipeDetailsLogic = () => {
     handle_Instructions_Button_Click,
     showContent,
     image,
-    title
+    title,
+    error,
+    MessageToDisplay
   };
 };
 

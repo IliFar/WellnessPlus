@@ -14,14 +14,16 @@ const RecipeDetails = () => {
     showContent,
     image,
     title,
+    error,
+    MessageToDisplay,
   } = RecipeDetailsLogic();
 
   return (
     <>
       <h1>Recipe Details</h1>
       <div className="recipe-details">
-        <RecipesCard image={image} title={title} />
-        <div className="recipe-info">
+        <RecipesCard image={image} title={title} className={`recipes-card ${error && "hidden"}`}/>
+        <div className={`recipe-info ${error && "hidden"}`}>
           <div className="recipe-btns">
             <Button
               class={descriptionClassName}
@@ -42,10 +44,14 @@ const RecipeDetails = () => {
               How To Make
             </Button>
           </div>
-          <div className="recipe-info-d">
-            {showContent()}
-          </div>
+          <div className="recipe-info-d">{showContent()}</div>
         </div>
+        {error && (
+          <div className="error">
+            <h2>{MessageToDisplay}</h2>
+            <span>{error}</span>
+          </div>
+        )}
       </div>
     </>
   );
