@@ -24,8 +24,9 @@
     align-items: center;
     gap: 5px;
     width: 30%;
-    height: 300px;
+    min-height: 220px;
     transition: 0.3s;
+    text-overflow: ellipsis;
 }
 .recipe-header {
     display: flex;
@@ -41,17 +42,10 @@
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
     transform: scale(1.2);
 }
-.recipes-title {
-    position: absolute;
-    
-}
 
 .recipes-title > h5 {
     font-size: 12px;
     text-align: center;
-    word-wrap: break-word;
-    position: relative;
-    top: 260px;
 }
 .recipe-details {
     display: flex;
@@ -105,6 +99,7 @@
 .error span {
     color:white;
 }
+
 .hidden {
     display: none;
 }
